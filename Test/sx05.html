@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>sx05</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>問５</h1>
+  <form>
+    <p>
+      半径:<input type="text" name="hankei">
+      <input type="button" name="btn" value="計算">
+    </p>
+    <p>面積:<span id="menseki"></span></p>
+  </form>
+  
+  <script>
+    const btn = document.querySelector('input:nth-child(2)');
+    btn.addEventListener('click', () => 
+    {
+      // const val = r.value;
+      const r = document.querySelector('input');
+      const val = parseInt(r.value);
+      let menseki = val * val * Math.PI;
+      console.log(`面積:${menseki}です`);
+    });
+    const p = document.querySelector('p:last-child');
+    p.textContent = `面積:${menseki}`;
+    
+  </script>
+</body>
+
+</html>
